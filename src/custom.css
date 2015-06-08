@@ -1,0 +1,18 @@
+.Reply_button {
+border-radius: 5px; 
+background-color: #F0F0F0; 
+padding:8px 8px 8px 15px; 
+float:right;
+}
+
+.Reply_button:hover {
+background-color: #428BCA;
+color: White;
+}
+
+#toggle {
+	border-top-style: double; 
+	border-color:#EDEDED;
+  	overflow: hidden;
+  }
+ 

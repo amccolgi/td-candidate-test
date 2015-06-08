@@ -8,21 +8,114 @@
 
 		<!-- Library styles -->
 		<link rel="stylesheet" href="libraries/bootstrap/dist/css/bootstrap.css"/>
-
+		<link rel="stylesheet" href="custom.css"/>
 		<!-- Component styles -->
 		<!-- build:css all.min.css -->
 		<link rel="stylesheet" href=".tmp/all.css"/>
+		
+		<!-- Toggle Button -->
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		
+		<!-- Reply Build -->
+		
+	
 		<!-- endbuild -->
 	</head>
-	<body role="document">
-		<div class="container">
-			<div class="starter-template" style="padding: 40px 15px; text-align: center;">
-				<h1>Starter Template</h1>
-				<p class="lead">Replace this <code>.starter-template</code> div with your new custom component.</p>
+	<body role="document" style="background-color:#F6F6F6; padding-top:0px;">
+		
+		<!-- Top Left Header -->
+		<div class="Left_Column_Header" style="float: left; border-right-style: double; border-color:#EDEDED;background-color: black; color: white; height:50px; padding-top:10px; padding-left: 10px; font-size: small; width:20%;">
+			<img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/01e/1c6/0683333.jpg" height=30px; width=30px; style="border-radius: 15px;"> Michael Holmes 
+		</div>
+		
+		<!-- Top Right Header -->
+		<div class="Right_Column_Header" style="background-color: black; color: white; height:50px; padding-top:10px; font-size: x-large;">
+			 <span style="padding-left: 30px;">Inbox</span> 
+		</div>
+		
+		<!-- the entire left column -->
+		<div class="Left_Column" style="float:left; border-right-style: double; border-color:#EDEDED; width: 20%; padding-top:15px; clear:both; position:absolute; bottom:0px; top:50px;">
+	
+		<!-- Load Screen -->
+	
+		<!-- This contains the left email navigation -->
+		<div class ="Email_Options">
+			<div class = "New_Email_Button" style="background-color:#4B748D; color:white; text-align:center; margin-left:15%;margin-right:15%; border-radius:3px; padding: 5px;">
+				<span class="glyphicon glyphicon-pencil"></span> New Email
+			</div>
+			<ul class="nav nav-pills nav-stacked" style="margin-left:5px; margin-right:5px;">
+			  <li role="Inbox"><a href="#"><div>Inbox <div style="float:right;font-size: small;background-color:#4B748D; color:white; border-radius:10px;width:25px;text-align:center;"> 42</div></div></a></li>
+			  <li role="Sent"><a href="#">Sent</a></li>
+			  <li role="Flagged"><a href="#">Flagged</a></li>
+			  <li role="Deleted"><a href="#">Deleted</a></li>
+			</ul>
+		</div>
+		
+		<!-- Close the left column -->
+		</div>
+		
+		<!-- This contains the email structure -->
+		<div style="float:right;width:70%; margin:5%">
+			<div class="panel panel-default"style="padding: 5px 20px;">
+				<div class="panel-body style="style="font-size: small;">
+					<div class="starter-template" style="padding: 10px 10px 10px 40px; ">
+						<div class="email_name" style="float: left;">
+							<img src="http://nebula.wsimg.com/eb39acb5db271d389d4a9bae5a7a9532?AccessKeyId=F7E68831DF2F6920AA98&disposition=0&alloworigin=1" height="50px" width="50px" style="border-radius:25px; float:left; margin-left:-55px; ">
+							<h4 style="line-height:50%;">Andrew McColgin</h4>
+							<h4 style="line-height:0px;"><small>amccolgi@gmail.com</small><h4>
+						</div>
+						<div class"email_date" style="float: right;">
+							<span style="line-height:10%;">09/18/2015</span>
+							<h6 style="color: white; background-color: #5CB85C; text-align: center; border-radius: 3px; padding: 2px;">Internal</h6>
+						</div>
+						<div class="email_body" style="padding-top: 20px; clear:both;">
+							<p class="lead" style="font-size: small;"> Hello! <br /><br />
+							At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+							voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+							cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est
+							laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
+							libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo.
+							</p>
+						</div>
+						<div id ="toggle">
+						<form class="navbar-form navbar-left" role="search">
+							<div id="form-group">
+								<input class="form-control" in="inputdefault" type="text" placeholder="Reply">
+							</div>
+						</form>
+						</div>
+						<div class="Reply_button" id="button">
+							<div id="Reply"><span class="glyphicon glyphicon-share-alt" ></span> Reply</div>
+							<div id="Send"><span class="glyphicon glyphicon-arrow-right" ></span> Send</div>
+								<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+								<script>
+								$(document).ready(function(){
+									$("#Reply").click(function(){
+										$("#toggle").show();
+										$("#Reply").hide();
+										$("#Send").show();
+									});
+									$("#Send").click(function(){
+									location.reload();
+									});
+								});
+								</script>
+						</div>
+						<script>
+						$(document).ready(function(){
+							$("#toggle").hide();
+							$("#Send").hide();
+							});
+						</script>					
+					</div>
+				</div>
 			</div>
 		</div>
 
-
+		<!-- Close the webpage container -->
+		</div>
+		
 		<!-- Library scripts -->
 		<script src="libraries/jquery/dist/jquery.js"></script>
 		<script src="libraries/bootstrap/dist/js/bootstrap.js"></script>
